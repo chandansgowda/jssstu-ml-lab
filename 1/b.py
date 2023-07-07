@@ -4,12 +4,16 @@ def best_first_search(graph,start,goal):
     while open_list:
         open_list.sort(reverse=True)
         cost, node = open_list.pop()
+        
+        if node in closed_list:
+            continue
 
         if node==goal:
             return cost
 
+        closed_list.add((cost,node))
         for neighbour, neighbour_cost in graph[node]:
-            if neighbour not in closed_list and neighbour not in [closed_node[0] for closed_node in closed_list]:
+            if neighbour not in closed_list and neighbour not in closed_list:
                 open_list.append((neighbour_cost+cost, neighbour))
 
     return None
