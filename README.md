@@ -18,7 +18,7 @@
 
 7. Write a program to develop the KNN classifier with Manhattan distance for the k value as 5 based on split up of training and testing dataset as 80-20 on Fruit dataset.
 
-8. Write a program to perform unsupervised K-means clustering technique on Lis dataset.
+8. Write a program to perform unsupervised K-means clustering technique on Iris dataset.
 
 9. Write a program to perform agglomeratiove clustering based on single-linkage and complete-linkage criteria.
 
