@@ -14,7 +14,7 @@
 
 5. Write a program to develop the Naive Bayes classifier on Titanic dataset.
 
-6. Write a program to develop the KNN classifier with Euclidean distance for the k value as 3 based on split up of training and testing dataset as 80-20 on Fruit dataset.
+6. Write a program to develop the KNN classifier with Euclidean distance for the k value as 3 based on split up of training and testing dataset as 70-30 on Glass dataset.
 
 7. Write a program to develop the KNN classifier with Manhattan distance for the k value as 5 based on split up of training and testing dataset as 80-20 on Fruit dataset.
 
