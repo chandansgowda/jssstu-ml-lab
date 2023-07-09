@@ -1,16 +1,11 @@
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_iris
 
-iris = load_iris()
-data = iris.data
-labels = iris.feature_names
+data=pd.read_csv('./ToyotaCorolla.csv')
 
-ax = plt.axes()
-ax.boxplot(data)
+plt.boxplot([data["Price"],data["HP"],data["KM"]])
 
-ax.set_xticklabels(labels)
-ax.set_ylabel('Value')
-ax.set_title('Box Plot')
+plt.xticks([1,2,3],["Price","HP","KM"])
 
 plt.show()

@@ -1,10 +1,9 @@
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
-data = np.random.randint(1,100,(30, 30))
+data=pd.read_csv("./ToyotaCorolla.csv")
 
-plt.imshow(data, cmap="hot")
-plt.colorbar()
-
-plt.title("Heatmap")
+sns.heatmap(data[["Price","KM","Doors", "Weight"]].corr(),cmap='jet')
 plt.show()

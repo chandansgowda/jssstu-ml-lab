@@ -1,12 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.outer(np.linspace(-1,1,100), np.ones(100))
-y = x.copy().T
-z = x**2 + y**2
+dataset = pd.read_csv('./ToyotaCorolla.csv')
+x = dataset['KM']
+y = dataset['Weight']
+z = dataset['Price']
 
-ax = plt.axes()
-ax.contour(x, y, z, levels=20)
-ax.set_title("Countour Plot")
-
+plt.tricontourf(x, y, z, levels=20, cmap='jet')
+plt.colorbar(label='Price')
+plt.xlabel('KM')
+plt.ylabel('Weight')
+plt.title('Contour Plot of Price vs. Age and KM')
 plt.show()
